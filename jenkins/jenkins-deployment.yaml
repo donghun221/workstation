@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: jenkins
+  namespace: workstation
+spec:
+  template:
+    metadata:
+      labels:
+        app: workstation
+      name: jenkins
+    spec:
+      containers:
+        - image: 'jenkins/jenkins:latest'
+          name: jenkins
